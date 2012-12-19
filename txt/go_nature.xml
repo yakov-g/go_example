@@ -1,0 +1,147 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+]>
+<refentry id="MOD1-NatureAnimal">
+<refmeta>
+<refentrytitle role="top_of_page" id="MOD1-NatureAnimal.top_of_page">NatureAnimal</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>
+  MOD1 Library
+</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>NatureAnimal</refname>
+<refpurpose></refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="MOD1-NatureAnimal.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>#define             <link linkend="NATURE-ANIMAL-TYPE:CAPS">NATURE_ANIMAL_TYPE</link>
+struct              <link linkend="NatureAnimal">NatureAnimal</link>;
+struct              <link linkend="NatureAnimalClass">NatureAnimalClass</link>;
+typedef             <link linkend="my-int">my_int</link>;
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="nature-animal-cry">nature_animal_cry</link>                   (<parameter><link linkend="NatureAnimal"><type>NatureAnimal</type></link> *self</parameter>,
+                                                         <parameter><link linkend="char"><type>char</type></link> *msg</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="nature-animal-eat">nature_animal_eat</link>                   (<parameter><link linkend="NatureAnimal"><type>NatureAnimal</type></link> *self</parameter>,
+                                                         <parameter><link linkend="char"><type>char</type></link> *msg</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="nature-animal-func">nature_animal_func</link>                  (<parameter><link linkend="NatureAnimal"><type>NatureAnimal</type></link> *self</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> nn</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="nature-animal-get-data">nature_animal_get_data</link>              (<parameter><link linkend="NatureAnimal"><type>NatureAnimal</type></link> *self</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="nature-animal-myint">nature_animal_myint</link>                 (<parameter><link linkend="NatureAnimal"><type>NatureAnimal</type></link> *self</parameter>,
+                                                         <parameter><link linkend="my-int"><type>my_int</type></link> n</parameter>);
+<link linkend="NatureAnimal"><returnvalue>NatureAnimal</returnvalue></link> *      <link linkend="nature-animal-new">nature_animal_new</link>                   (<parameter>const <link linkend="char"><type>char</type></link> *name</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> age</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="nature-animal-pint">nature_animal_pint</link>                  (<parameter><link linkend="NatureAnimal"><type>NatureAnimal</type></link> *self</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> *n</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="nature-animal-usualint">nature_animal_usualint</link>              (<parameter><link linkend="NatureAnimal"><type>NatureAnimal</type></link> *self</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> n</parameter>);
+</synopsis>
+</refsynopsisdiv>
+
+<refsect1 id="MOD1-NatureAnimal.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="MOD1-NatureAnimal.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="NATURE-ANIMAL-TYPE:CAPS" role="macro">
+<title>NATURE_ANIMAL_TYPE</title>
+<indexterm zone="NATURE-ANIMAL-TYPE:CAPS"><primary>NATURE_ANIMAL_TYPE</primary></indexterm>
+<programlisting>#define NATURE_ANIMAL_TYPE nature_animal_get_type()
+</programlisting>
+</refsect2>
+<refsect2 id="NatureAnimal" role="struct">
+<title>struct NatureAnimal</title>
+<indexterm zone="NatureAnimal"><primary>NatureAnimal</primary></indexterm>
+<programlisting>struct NatureAnimal {
+   GObject parent;
+
+   int age;
+   char *name;
+};
+</programlisting>
+</refsect2>
+<refsect2 id="NatureAnimalClass" role="struct">
+<title>struct NatureAnimalClass</title>
+<indexterm zone="NatureAnimalClass"><primary>NatureAnimalClass</primary></indexterm>
+<programlisting>struct NatureAnimalClass {
+   GObjectClass parent_class;
+
+   void (*eat)(NatureAnimal *self, char *msg);
+   void (*cry)(NatureAnimal *self, char *msg);
+   void (*myint)(NatureAnimal *self, my_int n);
+   void (*usualint)(NatureAnimal *self, int n);
+/**
+ * pint:(skip)
+ * @self:
+ * @pointer_to_int:(inout): annotation
+ *
+ *
+ * some text
+ */
+   void (*pint)(NatureAnimal *self, int *pointer_to_int);
+   void (*get_data)(NatureAnimal *self);
+};
+</programlisting>
+</refsect2>
+<refsect2 id="my-int" role="typedef">
+<title>my_int</title>
+<indexterm zone="my-int"><primary>my_int</primary></indexterm>
+<programlisting>typedef int my_int;
+</programlisting>
+</refsect2>
+<refsect2 id="nature-animal-cry" role="function">
+<title>nature_animal_cry ()</title>
+<indexterm zone="nature-animal-cry"><primary>nature_animal_cry</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                nature_animal_cry                   (<parameter><link linkend="NatureAnimal"><type>NatureAnimal</type></link> *self</parameter>,
+                                                         <parameter><link linkend="char"><type>char</type></link> *msg</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="nature-animal-eat" role="function">
+<title>nature_animal_eat ()</title>
+<indexterm zone="nature-animal-eat"><primary>nature_animal_eat</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                nature_animal_eat                   (<parameter><link linkend="NatureAnimal"><type>NatureAnimal</type></link> *self</parameter>,
+                                                         <parameter><link linkend="char"><type>char</type></link> *msg</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="nature-animal-func" role="function">
+<title>nature_animal_func ()</title>
+<indexterm zone="nature-animal-func"><primary>nature_animal_func</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                nature_animal_func                  (<parameter><link linkend="NatureAnimal"><type>NatureAnimal</type></link> *self</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> nn</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="nature-animal-get-data" role="function">
+<title>nature_animal_get_data ()</title>
+<indexterm zone="nature-animal-get-data"><primary>nature_animal_get_data</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                nature_animal_get_data              (<parameter><link linkend="NatureAnimal"><type>NatureAnimal</type></link> *self</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="nature-animal-myint" role="function">
+<title>nature_animal_myint ()</title>
+<indexterm zone="nature-animal-myint"><primary>nature_animal_myint</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                nature_animal_myint                 (<parameter><link linkend="NatureAnimal"><type>NatureAnimal</type></link> *self</parameter>,
+                                                         <parameter><link linkend="my-int"><type>my_int</type></link> n</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="nature-animal-new" role="function">
+<title>nature_animal_new ()</title>
+<indexterm zone="nature-animal-new"><primary>nature_animal_new</primary></indexterm>
+<programlisting><link linkend="NatureAnimal"><returnvalue>NatureAnimal</returnvalue></link> *      nature_animal_new                   (<parameter>const <link linkend="char"><type>char</type></link> *name</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> age</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="nature-animal-pint" role="function">
+<title>nature_animal_pint ()</title>
+<indexterm zone="nature-animal-pint"><primary>nature_animal_pint</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                nature_animal_pint                  (<parameter><link linkend="NatureAnimal"><type>NatureAnimal</type></link> *self</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> *n</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="nature-animal-usualint" role="function">
+<title>nature_animal_usualint ()</title>
+<indexterm zone="nature-animal-usualint"><primary>nature_animal_usualint</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                nature_animal_usualint              (<parameter><link linkend="NatureAnimal"><type>NatureAnimal</type></link> *self</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> n</parameter>);</programlisting>
+</refsect2>
+
+</refsect1>
+
+</refentry>

@@ -1,0 +1,321 @@
+<MACRO>
+<NAME>MANKIND_HUMAN_TYPE</NAME>
+#define MANKIND_HUMAN_TYPE mankind_human_get_type()
+</MACRO>
+<MACRO>
+<NAME>MANKIND_HUMAN</NAME>
+#define MANKIND_HUMAN(obj)   \
+(G_TYPE_CHECK_INSTANCE_CAST ((obj), MANKIND_HUMAN_TYPE, MankindHuman))
+</MACRO>
+<MACRO>
+<NAME>MANKIND_IS_HUMAN</NAME>
+#define MANKIND_IS_HUMAN(obj) \
+  (G_TYPE_CHECK_INSTANCE_TYPE ((obj),  MANKIND_HUMAN_TYPE))
+</MACRO>
+<MACRO>
+<NAME>MANKIND_HUMAN_CLASS</NAME>
+#define MANKIND_HUMAN_CLASS(klass) \
+  (G_TYPE_CHECK_CLASS_CAST ((klass), MANKIND_HUMAN_TYPE, MankindHumanClass))
+</MACRO>
+<MACRO>
+<NAME>MANKIND_IS_HUMAN_CLASS</NAME>
+#define MANKIND_IS_HUMAN_CLASS(klass) \
+  (G_TYPE_CHECK_CLASS_TYPE ((klass),  MANKIND_HUMAN_TYPE))
+</MACRO>
+<MACRO>
+<NAME>MANKIND_HUMAN_GET_CLASS</NAME>
+#define MANKIND_HUMAN_GET_CLASS(obj) \
+  (G_TYPE_INSTANCE_GET_CLASS ((obj),  MANKIND_HUMAN_TYPE, MankindHumanClass))
+</MACRO>
+<STRUCT>
+<NAME>MankindHuman</NAME>
+struct _MankindHuman
+{
+  NatureAnimal parent;
+  MankindHumanPrivate *private_data;
+
+};
+</STRUCT>
+<STRUCT>
+<NAME>MankindHumanClass</NAME>
+struct _MankindHumanClass
+{
+   NatureAnimalClass parent_class;
+};
+</STRUCT>
+<FUNCTION>
+<NAME>mankind_human_get_type</NAME>
+<RETURNS>GType  </RETURNS>
+void 
+</FUNCTION>
+<FUNCTION>
+<NAME>mankind_human_new</NAME>
+<RETURNS>NatureAnimal  *</RETURNS>
+const char *name, int age 
+</FUNCTION>
+<FUNCTION>
+<NAME>mankind_human_print_private</NAME>
+<RETURNS>void  </RETURNS>
+NatureAnimal *_self 
+</FUNCTION>
+<STRUCT>
+<NAME>MankindHumanPrivate</NAME>
+</STRUCT>
+<MACRO>
+<NAME>DIGITAL_COMP_TYPEEE</NAME>
+#define DIGITAL_COMP_TYPEEE digital_comp_get_type()
+</MACRO>
+<MACRO>
+<NAME>DIGITAL_COMP</NAME>
+#define DIGITAL_COMP(obj)   \
+   (G_TYPE_CHECK_INSTANCE_CAST ((obj), DIGITAL_COMP_TYPEEE, DigitalComp))
+</MACRO>
+<MACRO>
+<NAME>DIGITAL_IS_COMP</NAME>
+#define DIGITAL_IS_COMP(obj) \
+   (G_TYPE_CHECK_INSTANCE_TYPE ((obj),  DIGITAL_COMP_TYPEEE))
+</MACRO>
+<MACRO>
+<NAME>DIGITAL_COMP_CLASS</NAME>
+#define DIGITAL_COMP_CLASS(klass) \
+   (G_TYPE_CHECK_CLASS_CAST ((klass), DIGITAL_COMP_TYPEEE, DigitalCompClass))
+</MACRO>
+<MACRO>
+<NAME>DIGITAL_IS_COMP_CLASS</NAME>
+#define DIGITAL_IS_COMP_CLASS(klass) \
+   (G_TYPE_CHECK_CLASS_TYPE ((klass),  DIGITAL_COMP_TYPEEE))
+</MACRO>
+<MACRO>
+<NAME>DIGITAL_COMP_GET_CLASS</NAME>
+#define DIGITAL_COMP_GET_CLASS(obj) \
+   (G_TYPE_INSTANCE_GET_CLASS ((obj),  DIGITAL_COMP_TYPEEE, DigitalCompClass))
+</MACRO>
+<STRUCT>
+<NAME>DigitalComp</NAME>
+struct _DigitalComp
+{
+   GObject parent;
+
+   int age;
+   char *name;
+   /*< private >*/
+//   DigitalCompPrivate *priv;
+};
+</STRUCT>
+<STRUCT>
+<NAME>DigitalCompClass</NAME>
+struct _DigitalCompClass
+{
+   GObjectClass parent_class;
+
+   void (*compute)(DigitalComp *self, char *msg);
+   void (*reboot)(DigitalComp *self, char *msg);
+   void (*halt)(DigitalComp *self);
+};
+</STRUCT>
+<FUNCTION>
+<NAME>digital_comp_get_type</NAME>
+<RETURNS>GType  </RETURNS>
+void 
+</FUNCTION>
+<FUNCTION>
+<NAME>digital_comp_new</NAME>
+<RETURNS>DigitalComp  *</RETURNS>
+const char *name, int age 
+</FUNCTION>
+<FUNCTION>
+<NAME>digital_comp_compute</NAME>
+<RETURNS>void  </RETURNS>
+DigitalComp *self, char *msg 
+</FUNCTION>
+<FUNCTION>
+<NAME>digital_comp_reboot</NAME>
+<RETURNS>void  </RETURNS>
+DigitalComp *self, char *msg 
+</FUNCTION>
+<FUNCTION>
+<NAME>digital_comp_halt</NAME>
+<RETURNS>void  </RETURNS>
+DigitalComp *self 
+</FUNCTION>
+<TYPEDEF>
+<NAME>my_int</NAME>
+typedef int my_int;
+</TYPEDEF>
+<MACRO>
+<NAME>NATURE_ANIMAL_TYPE</NAME>
+#define NATURE_ANIMAL_TYPE nature_animal_get_type()
+</MACRO>
+<MACRO>
+<NAME>NATURE_ANIMAL</NAME>
+#define NATURE_ANIMAL(obj)   \
+   (G_TYPE_CHECK_INSTANCE_CAST ((obj), NATURE_ANIMAL_TYPE, NatureAnimal))
+</MACRO>
+<MACRO>
+<NAME>NATURE_IS_ANIMAL</NAME>
+#define NATURE_IS_ANIMAL(obj) \
+   (G_TYPE_CHECK_INSTANCE_TYPE ((obj),  NATURE_ANIMAL_TYPE))
+</MACRO>
+<MACRO>
+<NAME>NATURE_ANIMAL_CLASS</NAME>
+#define NATURE_ANIMAL_CLASS(klass) \
+   (G_TYPE_CHECK_CLASS_CAST ((klass), NATURE_ANIMAL_TYPE, NatureAnimalClass))
+</MACRO>
+<MACRO>
+<NAME>NATURE_IS_ANIMAL_CLASS</NAME>
+#define NATURE_IS_ANIMAL_CLASS(klass) \
+   (G_TYPE_CHECK_CLASS_TYPE ((klass),  NATURE_ANIMAL_TYPE))
+</MACRO>
+<MACRO>
+<NAME>NATURE_ANIMAL_GET_CLASS</NAME>
+#define NATURE_ANIMAL_GET_CLASS(obj) \
+   (G_TYPE_INSTANCE_GET_CLASS ((obj),  NATURE_ANIMAL_TYPE, NatureAnimalClass))
+</MACRO>
+<STRUCT>
+<NAME>NatureAnimal</NAME>
+struct _NatureAnimal
+{
+   GObject parent;
+
+   int age;
+   char *name;
+   /*< private >*/
+//   NatureAnimalPrivate *priv;
+};
+</STRUCT>
+<STRUCT>
+<NAME>NatureAnimalClass</NAME>
+struct _NatureAnimalClass
+{
+   GObjectClass parent_class;
+
+   void (*eat)(NatureAnimal *self, char *msg);
+   void (*cry)(NatureAnimal *self, char *msg);
+   void (*myint)(NatureAnimal *self, my_int n);
+   void (*usualint)(NatureAnimal *self, int n);
+/**
+ * pint:(skip)
+ * @self:
+ * @pointer_to_int:(inout): annotation
+ *
+ *
+ * some text
+ */
+   void (*pint)(NatureAnimal *self, int *pointer_to_int);
+   void (*get_data)(NatureAnimal *self);
+};
+</STRUCT>
+<FUNCTION>
+<NAME>nature_animal_get_type</NAME>
+<RETURNS>GType  </RETURNS>
+void 
+</FUNCTION>
+<FUNCTION>
+<NAME>nature_animal_new</NAME>
+<RETURNS>NatureAnimal  *</RETURNS>
+const char *name, int age 
+</FUNCTION>
+<FUNCTION>
+<NAME>nature_animal_eat</NAME>
+<RETURNS>void  </RETURNS>
+NatureAnimal *self, char *msg 
+</FUNCTION>
+<FUNCTION>
+<NAME>nature_animal_cry</NAME>
+<RETURNS>void  </RETURNS>
+NatureAnimal *self, char *msg 
+</FUNCTION>
+<FUNCTION>
+<NAME>nature_animal_myint</NAME>
+<RETURNS>void  </RETURNS>
+NatureAnimal *self, my_int n 
+</FUNCTION>
+<FUNCTION>
+<NAME>nature_animal_usualint</NAME>
+<RETURNS>void  </RETURNS>
+NatureAnimal *self, int n 
+</FUNCTION>
+<FUNCTION>
+<NAME>nature_animal_func</NAME>
+<RETURNS>void  </RETURNS>
+NatureAnimal *self, int nn 
+</FUNCTION>
+<FUNCTION>
+<NAME>nature_animal_pint</NAME>
+<RETURNS>void  </RETURNS>
+NatureAnimal *self, int *n 
+</FUNCTION>
+<FUNCTION>
+<NAME>nature_animal_get_data</NAME>
+<RETURNS>void  </RETURNS>
+NatureAnimal *self 
+</FUNCTION>
+<MACRO>
+<NAME>NATURE_MONKEY_TYPE</NAME>
+#define NATURE_MONKEY_TYPE nature_monkey_get_type()
+</MACRO>
+<MACRO>
+<NAME>NATURE_MONKEY</NAME>
+#define NATURE_MONKEY(obj)   \
+(G_TYPE_CHECK_INSTANCE_CAST ((obj), NATURE_MONKEY_TYPE, NatureMonkey))
+</MACRO>
+<MACRO>
+<NAME>NATURE_IS_MONKEY</NAME>
+#define NATURE_IS_MONKEY(obj) \
+  (G_TYPE_CHECK_INSTANCE_TYPE ((obj),  NATURE_MONKEY_TYPE))
+</MACRO>
+<MACRO>
+<NAME>NATURE_MONKEY_CLASS</NAME>
+#define NATURE_MONKEY_CLASS(klass) \
+  (G_TYPE_CHECK_CLASS_CAST ((klass), NATURE_MONKEY_TYPE, NatureMonkeyClass))
+</MACRO>
+<MACRO>
+<NAME>NATURE_IS_MONKEY_CLASS</NAME>
+#define NATURE_IS_MONKEY_CLASS(klass) \
+  (G_TYPE_CHECK_CLASS_TYPE ((klass),  NATURE_MONKEY_TYPE))
+</MACRO>
+<MACRO>
+<NAME>NATURE_MONKEY_GET_CLASS</NAME>
+#define NATURE_MONKEY_GET_CLASS(obj) \
+  (G_TYPE_INSTANCE_GET_CLASS ((obj),  NATURE_MONKEY_TYPE, NatureMonkeyClass))
+</MACRO>
+<STRUCT>
+<NAME>NatureMonkey</NAME>
+struct _NatureMonkey
+{
+  NatureAnimal parent;
+  NatureMonkeyPrivate *private_data;
+
+  int monkey_public;
+};
+</STRUCT>
+<STRUCT>
+<NAME>NatureMonkeyClass</NAME>
+struct _NatureMonkeyClass
+{
+   NatureAnimalClass parent_class;
+};
+</STRUCT>
+<FUNCTION>
+<NAME>nature_monkey_get_type</NAME>
+<RETURNS>GType  </RETURNS>
+void 
+</FUNCTION>
+<FUNCTION>
+<NAME>nature_monkey_new</NAME>
+<RETURNS>NatureAnimal  *</RETURNS>
+const char *name, int age 
+</FUNCTION>
+<FUNCTION>
+<NAME>nature_monkey_set_private</NAME>
+<RETURNS>void  </RETURNS>
+NatureAnimal *_self, char *_kind, char *_place 
+</FUNCTION>
+<FUNCTION>
+<NAME>nature_monkey_print_private</NAME>
+<RETURNS>void  </RETURNS>
+NatureAnimal *_self 
+</FUNCTION>
+<STRUCT>
+<NAME>NatureMonkeyPrivate</NAME>
+</STRUCT>

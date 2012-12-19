@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+]>
+<refentry id="MOD1-DigitalComp">
+<refmeta>
+<refentrytitle role="top_of_page" id="MOD1-DigitalComp.top_of_page">DigitalComp</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>
+  MOD1 Library
+</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>DigitalComp</refname>
+<refpurpose></refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="MOD1-DigitalComp.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>#define             <link linkend="DIGITAL-COMP-TYPEEE:CAPS">DIGITAL_COMP_TYPEEE</link>
+struct              <link linkend="DigitalComp">DigitalComp</link>;
+struct              <link linkend="DigitalCompClass">DigitalCompClass</link>;
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="digital-comp-compute">digital_comp_compute</link>                (<parameter><link linkend="DigitalComp"><type>DigitalComp</type></link> *self</parameter>,
+                                                         <parameter><link linkend="char"><type>char</type></link> *msg</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="digital-comp-halt">digital_comp_halt</link>                   (<parameter><link linkend="DigitalComp"><type>DigitalComp</type></link> *self</parameter>);
+<link linkend="DigitalComp"><returnvalue>DigitalComp</returnvalue></link> *       <link linkend="digital-comp-new">digital_comp_new</link>                    (<parameter>const <link linkend="char"><type>char</type></link> *name</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> age</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="digital-comp-reboot">digital_comp_reboot</link>                 (<parameter><link linkend="DigitalComp"><type>DigitalComp</type></link> *self</parameter>,
+                                                         <parameter><link linkend="char"><type>char</type></link> *msg</parameter>);
+</synopsis>
+</refsynopsisdiv>
+
+<refsect1 id="MOD1-DigitalComp.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="MOD1-DigitalComp.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="DIGITAL-COMP-TYPEEE:CAPS" role="macro">
+<title>DIGITAL_COMP_TYPEEE</title>
+<indexterm zone="DIGITAL-COMP-TYPEEE:CAPS"><primary>DIGITAL_COMP_TYPEEE</primary></indexterm>
+<programlisting>#define DIGITAL_COMP_TYPEEE digital_comp_get_type()
+</programlisting>
+</refsect2>
+<refsect2 id="DigitalComp" role="struct">
+<title>struct DigitalComp</title>
+<indexterm zone="DigitalComp"><primary>DigitalComp</primary></indexterm>
+<programlisting>struct DigitalComp {
+   GObject parent;
+
+   int age;
+   char *name;
+};
+</programlisting>
+</refsect2>
+<refsect2 id="DigitalCompClass" role="struct">
+<title>struct DigitalCompClass</title>
+<indexterm zone="DigitalCompClass"><primary>DigitalCompClass</primary></indexterm>
+<programlisting>struct DigitalCompClass {
+   GObjectClass parent_class;
+
+   void (*compute)(DigitalComp *self, char *msg);
+   void (*reboot)(DigitalComp *self, char *msg);
+   void (*halt)(DigitalComp *self);
+};
+</programlisting>
+</refsect2>
+<refsect2 id="digital-comp-compute" role="function">
+<title>digital_comp_compute ()</title>
+<indexterm zone="digital-comp-compute"><primary>digital_comp_compute</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                digital_comp_compute                (<parameter><link linkend="DigitalComp"><type>DigitalComp</type></link> *self</parameter>,
+                                                         <parameter><link linkend="char"><type>char</type></link> *msg</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="digital-comp-halt" role="function">
+<title>digital_comp_halt ()</title>
+<indexterm zone="digital-comp-halt"><primary>digital_comp_halt</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                digital_comp_halt                   (<parameter><link linkend="DigitalComp"><type>DigitalComp</type></link> *self</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="digital-comp-new" role="function">
+<title>digital_comp_new ()</title>
+<indexterm zone="digital-comp-new"><primary>digital_comp_new</primary></indexterm>
+<programlisting><link linkend="DigitalComp"><returnvalue>DigitalComp</returnvalue></link> *       digital_comp_new                    (<parameter>const <link linkend="char"><type>char</type></link> *name</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> age</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="digital-comp-reboot" role="function">
+<title>digital_comp_reboot ()</title>
+<indexterm zone="digital-comp-reboot"><primary>digital_comp_reboot</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                digital_comp_reboot                 (<parameter><link linkend="DigitalComp"><type>DigitalComp</type></link> *self</parameter>,
+                                                         <parameter><link linkend="char"><type>char</type></link> *msg</parameter>);</programlisting>
+</refsect2>
+
+</refsect1>
+
+</refentry>

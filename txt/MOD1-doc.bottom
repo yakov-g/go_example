@@ -1,0 +1,4 @@
+    <xi:include href="xml/go_digital.xml"/>
+    <xi:include href="xml/go_human.xml"/>
+    <xi:include href="xml/go_monkey.xml"/>
+    <xi:include href="xml/go_nature.xml"/>

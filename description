@@ -1,0 +1,52 @@
+/*during call of g_object_new() - overriden class constructor is called
+_nature_monkey_constructor - start
+   /*checking input parameters*/
+	name
+	age: 5
+   
+   /*call for parent constructor for MONKEY, which is ANIMAL constructor*/
+	call for monkey parent constructor - start
+
+       /*call of ANIMAL constructor */
+		_nature_animal_constructor - start
+ 			/*checking input parameters*/
+			name
+			age: 5
+
+			/*call for parent constructor for ANIMAL, which is g_object_constructor()
+           which
+ 			   - creates instance (g_type_create_instance)
+              so _init functions are invoked
+					- animal init
+					- monkey init
+				g_type_create_instance() returns and g_object_constructor() sets properties
+				- property set, if property should be constructed
+Finally, at one point or another, g_object_constructor is invoked by the last constructor in the chain. This function allocates the object's instance' buffer through g_type_create_instance which means that the instance_init function is invoked at this point if one was registered. After instance_init returns, the object is fully initialized and should be ready to answer any user-request. When g_type_create_instance returns, g_object_constructor sets the construction properties (i.e. the properties which were given to g_object_new) and returns to the user's constructor which is then allowed to do useful instance initialization...
+         */
+			call for animal parent(gobject constr) constructor - start
+				nature_animal_init - start
+				  initializing public age to "0"
+				  initializing public name to "(null)"
+				nature_animal_init - end
+				nature_monkey_init - start
+			     initializing monkey_public to "0"
+				  initializing private kind to "Default"
+    			  initializing private place to "Default"
+				nature_monkey_init - end
+				_nature_animal_set_property
+					setting property name: Monkey
+				_nature_animal_set_property
+					setting property age: 5
+			call for animal parent(g_object_constructor) constructor - end
+         /*after object is created 
+				g_object_constructor() returns to user's constructor
+				which is then allowed to do useful instance initialization...
+
+				We can assign values to object's fields. 	
+				It's made with property_set, but if we don't want to....
+            we can do here something else
+         */
+		_nature_animal_constructor - end
+	call for monkey parent constructor - end
+_nature_monkey_constructor - end
+

@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+]>
+<refentry id="MOD1-MankindHuman">
+<refmeta>
+<refentrytitle role="top_of_page" id="MOD1-MankindHuman.top_of_page">MankindHuman</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>
+  MOD1 Library
+</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>MankindHuman</refname>
+<refpurpose></refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="MOD1-MankindHuman.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>#define             <link linkend="MANKIND-HUMAN-TYPE:CAPS">MANKIND_HUMAN_TYPE</link>
+struct              <link linkend="MankindHuman">MankindHuman</link>;
+struct              <link linkend="MankindHumanClass">MankindHumanClass</link>;
+<link linkend="NatureAnimal"><returnvalue>NatureAnimal</returnvalue></link> *      <link linkend="mankind-human-new">mankind_human_new</link>                   (<parameter>const <link linkend="char"><type>char</type></link> *name</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> age</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="mankind-human-print-private">mankind_human_print_private</link>         (<parameter><link linkend="NatureAnimal"><type>NatureAnimal</type></link> *_self</parameter>);
+</synopsis>
+</refsynopsisdiv>
+
+<refsect1 id="MOD1-MankindHuman.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="MOD1-MankindHuman.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="MANKIND-HUMAN-TYPE:CAPS" role="macro">
+<title>MANKIND_HUMAN_TYPE</title>
+<indexterm zone="MANKIND-HUMAN-TYPE:CAPS"><primary>MANKIND_HUMAN_TYPE</primary></indexterm>
+<programlisting>#define MANKIND_HUMAN_TYPE mankind_human_get_type()
+</programlisting>
+</refsect2>
+<refsect2 id="MankindHuman" role="struct">
+<title>struct MankindHuman</title>
+<indexterm zone="MankindHuman"><primary>MankindHuman</primary></indexterm>
+<programlisting>struct MankindHuman {
+  NatureAnimal parent;
+  MankindHumanPrivate *private_data;
+};
+</programlisting>
+</refsect2>
+<refsect2 id="MankindHumanClass" role="struct">
+<title>struct MankindHumanClass</title>
+<indexterm zone="MankindHumanClass"><primary>MankindHumanClass</primary></indexterm>
+<programlisting>struct MankindHumanClass {
+   NatureAnimalClass parent_class;
+};
+</programlisting>
+</refsect2>
+<refsect2 id="mankind-human-new" role="function">
+<title>mankind_human_new ()</title>
+<indexterm zone="mankind-human-new"><primary>mankind_human_new</primary></indexterm>
+<programlisting><link linkend="NatureAnimal"><returnvalue>NatureAnimal</returnvalue></link> *      mankind_human_new                   (<parameter>const <link linkend="char"><type>char</type></link> *name</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> age</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="mankind-human-print-private" role="function">
+<title>mankind_human_print_private ()</title>
+<indexterm zone="mankind-human-print-private"><primary>mankind_human_print_private</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                mankind_human_print_private         (<parameter><link linkend="NatureAnimal"><type>NatureAnimal</type></link> *_self</parameter>);</programlisting>
+</refsect2>
+
+</refsect1>
+
+</refentry>

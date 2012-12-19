@@ -1,0 +1,46 @@
+0% symbol docs coverage.
+0 symbols documented.
+25 symbols incomplete.
+38 not documented.
+
+
+DIGITAL_COMP_TYPEEE
+DigitalComp (<items>)
+DigitalCompClass (<items>)
+MANKIND_HUMAN_TYPE
+MankindHuman (<items>)
+MankindHumanClass (<items>)
+NATURE_ANIMAL_TYPE
+NATURE_MONKEY_TYPE
+NatureAnimal (<items>)
+NatureAnimalClass (<items>)
+NatureMonkey (<items>)
+NatureMonkeyClass (<items>)
+digital_comp_compute (<parameters>)
+digital_comp_halt (<parameters>)
+digital_comp_new (<parameters>)
+digital_comp_reboot (<parameters>)
+mankind_human_new (<parameters>)
+mankind_human_print_private (<parameters>)
+my_int
+nature_animal_cry (<parameters>)
+nature_animal_eat (<parameters>)
+nature_animal_func (<parameters>)
+nature_animal_get_data (<parameters>)
+nature_animal_myint (<parameters>)
+nature_animal_new (<parameters>)
+nature_animal_pint (<parameters>)
+nature_animal_usualint (<parameters>)
+nature_monkey_new (<parameters>)
+nature_monkey_print_private (<parameters>)
+nature_monkey_set_private (<parameters>)
+
+
+go_digital:Long_Description
+go_digital:Short_Description
+go_human:Long_Description
+go_human:Short_Description
+go_monkey:Long_Description
+go_monkey:Short_Description
+go_nature:Long_Description
+go_nature:Short_Description

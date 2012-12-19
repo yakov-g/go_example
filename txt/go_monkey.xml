@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+]>
+<refentry id="MOD1-NatureMonkey">
+<refmeta>
+<refentrytitle role="top_of_page" id="MOD1-NatureMonkey.top_of_page">NatureMonkey</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>
+  MOD1 Library
+</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>NatureMonkey</refname>
+<refpurpose></refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="MOD1-NatureMonkey.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>#define             <link linkend="NATURE-MONKEY-TYPE:CAPS">NATURE_MONKEY_TYPE</link>
+struct              <link linkend="NatureMonkey">NatureMonkey</link>;
+struct              <link linkend="NatureMonkeyClass">NatureMonkeyClass</link>;
+<link linkend="NatureAnimal"><returnvalue>NatureAnimal</returnvalue></link> *      <link linkend="nature-monkey-new">nature_monkey_new</link>                   (<parameter>const <link linkend="char"><type>char</type></link> *name</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> age</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="nature-monkey-print-private">nature_monkey_print_private</link>         (<parameter><link linkend="NatureAnimal"><type>NatureAnimal</type></link> *_self</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="nature-monkey-set-private">nature_monkey_set_private</link>           (<parameter><link linkend="NatureAnimal"><type>NatureAnimal</type></link> *_self</parameter>,
+                                                         <parameter><link linkend="char"><type>char</type></link> *_kind</parameter>,
+                                                         <parameter><link linkend="char"><type>char</type></link> *_place</parameter>);
+</synopsis>
+</refsynopsisdiv>
+
+<refsect1 id="MOD1-NatureMonkey.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="MOD1-NatureMonkey.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="NATURE-MONKEY-TYPE:CAPS" role="macro">
+<title>NATURE_MONKEY_TYPE</title>
+<indexterm zone="NATURE-MONKEY-TYPE:CAPS"><primary>NATURE_MONKEY_TYPE</primary></indexterm>
+<programlisting>#define NATURE_MONKEY_TYPE nature_monkey_get_type()
+</programlisting>
+</refsect2>
+<refsect2 id="NatureMonkey" role="struct">
+<title>struct NatureMonkey</title>
+<indexterm zone="NatureMonkey"><primary>NatureMonkey</primary></indexterm>
+<programlisting>struct NatureMonkey {
+  NatureAnimal parent;
+  NatureMonkeyPrivate *private_data;
+
+  int monkey_public;
+};
+</programlisting>
+</refsect2>
+<refsect2 id="NatureMonkeyClass" role="struct">
+<title>struct NatureMonkeyClass</title>
+<indexterm zone="NatureMonkeyClass"><primary>NatureMonkeyClass</primary></indexterm>
+<programlisting>struct NatureMonkeyClass {
+   NatureAnimalClass parent_class;
+};
+</programlisting>
+</refsect2>
+<refsect2 id="nature-monkey-new" role="function">
+<title>nature_monkey_new ()</title>
+<indexterm zone="nature-monkey-new"><primary>nature_monkey_new</primary></indexterm>
+<programlisting><link linkend="NatureAnimal"><returnvalue>NatureAnimal</returnvalue></link> *      nature_monkey_new                   (<parameter>const <link linkend="char"><type>char</type></link> *name</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> age</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="nature-monkey-print-private" role="function">
+<title>nature_monkey_print_private ()</title>
+<indexterm zone="nature-monkey-print-private"><primary>nature_monkey_print_private</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                nature_monkey_print_private         (<parameter><link linkend="NatureAnimal"><type>NatureAnimal</type></link> *_self</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="nature-monkey-set-private" role="function">
+<title>nature_monkey_set_private ()</title>
+<indexterm zone="nature-monkey-set-private"><primary>nature_monkey_set_private</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                nature_monkey_set_private           (<parameter><link linkend="NatureAnimal"><type>NatureAnimal</type></link> *_self</parameter>,
+                                                         <parameter><link linkend="char"><type>char</type></link> *_kind</parameter>,
+                                                         <parameter><link linkend="char"><type>char</type></link> *_place</parameter>);</programlisting>
+</refsect2>
+
+</refsect1>
+
+</refentry>

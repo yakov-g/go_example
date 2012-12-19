@@ -1,0 +1,361 @@
+<?xml version="1.0"?>
+<!-- This file was automatically generated from C sources - DO NOT EDIT!
+To affect the contents of this file, edit the original C definitions,
+and/or use gtk-doc annotations.  -->
+<repository version="1.2"
+            xmlns="http://www.gtk.org/introspection/core/1.0"
+            xmlns:c="http://www.gtk.org/introspection/c/1.0"
+            xmlns:glib="http://www.gtk.org/introspection/glib/1.0">
+  <include name="GLib" version="2.0"/>
+  <include name="GObject" version="2.0"/>
+  <package name="gtk+-2.0"/>
+  <namespace name="Nature"
+             version="1.0"
+             shared-library="libgonatureanimal.so,libgonaturemonkey.so"
+             c:identifier-prefixes="Nature"
+             c:symbol-prefixes="nature">
+    <class name="Animal"
+           c:symbol-prefix="animal"
+           c:type="NatureAnimal"
+           parent="GObject.Object"
+           glib:type-name="NatureAnimal"
+           glib:get-type="nature_animal_get_type"
+           glib:type-struct="AnimalClass">
+      <constructor name="new" c:identifier="nature_animal_new">
+        <return-value transfer-ownership="full">
+          <type name="Animal" c:type="NatureAnimal*"/>
+        </return-value>
+        <parameters>
+          <parameter name="name" transfer-ownership="none">
+            <type name="utf8" c:type="const char*"/>
+          </parameter>
+          <parameter name="age" transfer-ownership="none">
+            <type name="gint" c:type="int"/>
+          </parameter>
+        </parameters>
+      </constructor>
+      <virtual-method name="cry" invoker="cry">
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <parameter name="msg" transfer-ownership="none">
+            <type name="utf8" c:type="char*"/>
+          </parameter>
+        </parameters>
+      </virtual-method>
+      <virtual-method name="eat" invoker="eat">
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <parameter name="msg" transfer-ownership="none">
+            <type name="utf8" c:type="char*"/>
+          </parameter>
+        </parameters>
+      </virtual-method>
+      <virtual-method name="get_data" invoker="get_data">
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+      </virtual-method>
+      <virtual-method name="myint" invoker="myint" introspectable="0">
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <parameter name="n" transfer-ownership="none">
+            <type c:type="my_int"/>
+          </parameter>
+        </parameters>
+      </virtual-method>
+      <virtual-method name="p_to_int">
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <parameter name="pointer_to_int" transfer-ownership="none">
+            <type name="gint" c:type="int*"/>
+          </parameter>
+          <parameter name="arr" transfer-ownership="none">
+            <type name="gint" c:type="int*"/>
+          </parameter>
+        </parameters>
+      </virtual-method>
+      <virtual-method name="usualint">
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <parameter name="n" transfer-ownership="none">
+            <type name="gint" c:type="int"/>
+          </parameter>
+        </parameters>
+      </virtual-method>
+      <method name="cry" c:identifier="nature_animal_cry">
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <parameter name="msg" transfer-ownership="none">
+            <type name="utf8" c:type="char*"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="eat" c:identifier="nature_animal_eat">
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <parameter name="msg" transfer-ownership="none">
+            <type name="utf8" c:type="char*"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="func" c:identifier="nature_animal_func" introspectable="0">
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <parameter name="nn" transfer-ownership="none">
+            <doc xml:whitespace="preserve">some parameter in _func:</doc>
+            <type name="gint" c:type="int"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="get_data" c:identifier="nature_animal_get_data">
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+      </method>
+      <method name="myint"
+              c:identifier="nature_animal_myint"
+              introspectable="0">
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <parameter name="n" transfer-ownership="none">
+            <type c:type="my_int"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="pint" c:identifier="nature_animal_pint">
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <parameter name="n" transfer-ownership="none">
+            <doc xml:whitespace="preserve">some parameter in pint:</doc>
+            <type name="gint" c:type="int*"/>
+          </parameter>
+          <parameter name="a"
+                     direction="out"
+                     caller-allocates="0"
+                     transfer-ownership="full">
+            <doc xml:whitespace="preserve">array: function which returns pointer to int</doc>
+            <array zero-terminated="0" c:type="int**" fixed-size="2">
+              <type name="gint" c:type="int*"/>
+            </array>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="uint" c:identifier="nature_animal_uint">
+        <doc xml:whitespace="preserve">Introspecting usual integer type</doc>
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <parameter name="n" transfer-ownership="none">
+            <doc xml:whitespace="preserve">some parameter:</doc>
+            <type name="gint" c:type="int"/>
+          </parameter>
+        </parameters>
+      </method>
+      <property name="age"
+                writable="1"
+                construct="1"
+                transfer-ownership="none">
+        <type name="gint"/>
+      </property>
+      <property name="name"
+                writable="1"
+                construct="1"
+                transfer-ownership="none">
+        <type name="utf8"/>
+      </property>
+      <field name="parent">
+        <type name="GObject.Object" c:type="GObject"/>
+      </field>
+      <field name="age">
+        <type name="gint" c:type="int"/>
+      </field>
+      <field name="name">
+        <type name="utf8" c:type="char*"/>
+      </field>
+    </class>
+    <record name="AnimalClass"
+            c:type="NatureAnimalClass"
+            glib:is-gtype-struct-for="Animal">
+      <field name="parent_class">
+        <type name="GObject.ObjectClass" c:type="GObjectClass"/>
+      </field>
+      <field name="eat">
+        <callback name="eat">
+          <return-value transfer-ownership="none">
+            <type name="none" c:type="void"/>
+          </return-value>
+          <parameters>
+            <parameter name="self" transfer-ownership="none">
+              <type name="Animal" c:type="NatureAnimal*"/>
+            </parameter>
+            <parameter name="msg" transfer-ownership="none">
+              <type name="utf8" c:type="char*"/>
+            </parameter>
+          </parameters>
+        </callback>
+      </field>
+      <field name="cry">
+        <callback name="cry">
+          <return-value transfer-ownership="none">
+            <type name="none" c:type="void"/>
+          </return-value>
+          <parameters>
+            <parameter name="self" transfer-ownership="none">
+              <type name="Animal" c:type="NatureAnimal*"/>
+            </parameter>
+            <parameter name="msg" transfer-ownership="none">
+              <type name="utf8" c:type="char*"/>
+            </parameter>
+          </parameters>
+        </callback>
+      </field>
+      <field name="myint" introspectable="0">
+        <callback name="myint" introspectable="0">
+          <return-value transfer-ownership="none">
+            <type name="none" c:type="void"/>
+          </return-value>
+          <parameters>
+            <parameter name="self" transfer-ownership="none">
+              <type name="Animal" c:type="NatureAnimal*"/>
+            </parameter>
+            <parameter name="n" transfer-ownership="none">
+              <type c:type="my_int"/>
+            </parameter>
+          </parameters>
+        </callback>
+      </field>
+      <field name="usualint">
+        <callback name="usualint">
+          <return-value transfer-ownership="none">
+            <type name="none" c:type="void"/>
+          </return-value>
+          <parameters>
+            <parameter name="self" transfer-ownership="none">
+              <type name="Animal" c:type="NatureAnimal*"/>
+            </parameter>
+            <parameter name="n" transfer-ownership="none">
+              <type name="gint" c:type="int"/>
+            </parameter>
+          </parameters>
+        </callback>
+      </field>
+      <field name="p_to_int">
+        <callback name="p_to_int">
+          <return-value transfer-ownership="none">
+            <type name="none" c:type="void"/>
+          </return-value>
+          <parameters>
+            <parameter name="self" transfer-ownership="none">
+              <type name="Animal" c:type="NatureAnimal*"/>
+            </parameter>
+            <parameter name="pointer_to_int" transfer-ownership="none">
+              <type name="gint" c:type="int*"/>
+            </parameter>
+            <parameter name="arr" transfer-ownership="none">
+              <type name="gint" c:type="int*"/>
+            </parameter>
+          </parameters>
+        </callback>
+      </field>
+      <field name="get_data">
+        <callback name="get_data">
+          <return-value transfer-ownership="none">
+            <type name="none" c:type="void"/>
+          </return-value>
+          <parameters>
+            <parameter name="self" transfer-ownership="none">
+              <type name="Animal" c:type="NatureAnimal*"/>
+            </parameter>
+          </parameters>
+        </callback>
+      </field>
+    </record>
+    <class name="Monkey"
+           c:symbol-prefix="monkey"
+           c:type="NatureMonkey"
+           parent="Animal"
+           glib:type-name="NatureMonkey"
+           glib:get-type="nature_monkey_get_type"
+           glib:type-struct="MonkeyClass">
+      <constructor name="new" c:identifier="nature_monkey_new">
+        <return-value transfer-ownership="full">
+          <type name="Animal" c:type="NatureAnimal*"/>
+        </return-value>
+        <parameters>
+          <parameter name="name" transfer-ownership="none">
+            <type name="utf8" c:type="const char*"/>
+          </parameter>
+          <parameter name="age" transfer-ownership="none">
+            <type name="gint" c:type="int"/>
+          </parameter>
+        </parameters>
+      </constructor>
+      <function name="print_private"
+                c:identifier="nature_monkey_print_private">
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <parameter name="_self" transfer-ownership="none">
+            <type name="Animal" c:type="NatureAnimal*"/>
+          </parameter>
+        </parameters>
+      </function>
+      <function name="set_private" c:identifier="nature_monkey_set_private">
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <parameter name="_self" transfer-ownership="none">
+            <type name="Animal" c:type="NatureAnimal*"/>
+          </parameter>
+          <parameter name="_kind" transfer-ownership="none">
+            <type name="utf8" c:type="char*"/>
+          </parameter>
+          <parameter name="_place" transfer-ownership="none">
+            <type name="utf8" c:type="char*"/>
+          </parameter>
+        </parameters>
+      </function>
+      <field name="parent">
+        <type name="Animal" c:type="NatureAnimal"/>
+      </field>
+      <field name="private_data">
+        <type name="MonkeyPrivate" c:type="NatureMonkeyPrivate*"/>
+      </field>
+      <field name="monkey_public">
+        <type name="gint" c:type="int"/>
+      </field>
+    </class>
+    <record name="MonkeyClass"
+            c:type="NatureMonkeyClass"
+            glib:is-gtype-struct-for="Monkey">
+      <field name="parent_class">
+        <type name="AnimalClass" c:type="NatureAnimalClass"/>
+      </field>
+    </record>
+    <record name="MonkeyPrivate" c:type="NatureMonkeyPrivate" disguised="1">
+    </record>
+  </namespace>
+</repository>

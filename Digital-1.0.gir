@@ -1,0 +1,147 @@
+<?xml version="1.0"?>
+<!-- This file was automatically generated from C sources - DO NOT EDIT!
+To affect the contents of this file, edit the original C definitions,
+and/or use gtk-doc annotations.  -->
+<repository version="1.2"
+            xmlns="http://www.gtk.org/introspection/core/1.0"
+            xmlns:c="http://www.gtk.org/introspection/c/1.0"
+            xmlns:glib="http://www.gtk.org/introspection/glib/1.0">
+  <include name="GLib" version="2.0"/>
+  <include name="GObject" version="2.0"/>
+  <package name="gtk+-2.0"/>
+  <namespace name="Digital"
+             version="1.0"
+             shared-library="libgodigitalcomp.so"
+             c:identifier-prefixes="Digital"
+             c:symbol-prefixes="digital">
+    <class name="Comp"
+           c:symbol-prefix="comp"
+           c:type="DigitalComp"
+           parent="GObject.Object"
+           glib:type-name="DigitalComp"
+           glib:get-type="digital_comp_get_type"
+           glib:type-struct="CompClass">
+      <constructor name="new" c:identifier="digital_comp_new">
+        <return-value transfer-ownership="full">
+          <type name="Comp" c:type="DigitalComp*"/>
+        </return-value>
+        <parameters>
+          <parameter name="name" transfer-ownership="none">
+            <type name="utf8" c:type="char*"/>
+          </parameter>
+          <parameter name="age" transfer-ownership="none">
+            <type name="gint" c:type="int"/>
+          </parameter>
+        </parameters>
+      </constructor>
+      <virtual-method name="compute" invoker="compute">
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <parameter name="msg" transfer-ownership="none">
+            <type name="utf8" c:type="char*"/>
+          </parameter>
+        </parameters>
+      </virtual-method>
+      <virtual-method name="halt" invoker="halt">
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+      </virtual-method>
+      <virtual-method name="reboot" invoker="reboot">
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <parameter name="msg" transfer-ownership="none">
+            <type name="utf8" c:type="char*"/>
+          </parameter>
+        </parameters>
+      </virtual-method>
+      <method name="compute" c:identifier="digital_comp_compute">
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <parameter name="msg" transfer-ownership="none">
+            <type name="utf8" c:type="char*"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="halt" c:identifier="digital_comp_halt">
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+      </method>
+      <method name="reboot" c:identifier="digital_comp_reboot">
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <parameter name="msg" transfer-ownership="none">
+            <type name="utf8" c:type="char*"/>
+          </parameter>
+        </parameters>
+      </method>
+      <field name="parent">
+        <type name="GObject.Object" c:type="GObject"/>
+      </field>
+      <field name="age">
+        <type name="gint" c:type="int"/>
+      </field>
+      <field name="name">
+        <type name="utf8" c:type="char*"/>
+      </field>
+    </class>
+    <record name="CompClass"
+            c:type="DigitalCompClass"
+            glib:is-gtype-struct-for="Comp">
+      <field name="parent_class">
+        <type name="GObject.ObjectClass" c:type="GObjectClass"/>
+      </field>
+      <field name="compute">
+        <callback name="compute">
+          <return-value transfer-ownership="none">
+            <type name="none" c:type="void"/>
+          </return-value>
+          <parameters>
+            <parameter name="self" transfer-ownership="none">
+              <type name="Comp" c:type="DigitalComp*"/>
+            </parameter>
+            <parameter name="msg" transfer-ownership="none">
+              <type name="utf8" c:type="char*"/>
+            </parameter>
+          </parameters>
+        </callback>
+      </field>
+      <field name="reboot">
+        <callback name="reboot">
+          <return-value transfer-ownership="none">
+            <type name="none" c:type="void"/>
+          </return-value>
+          <parameters>
+            <parameter name="self" transfer-ownership="none">
+              <type name="Comp" c:type="DigitalComp*"/>
+            </parameter>
+            <parameter name="msg" transfer-ownership="none">
+              <type name="utf8" c:type="char*"/>
+            </parameter>
+          </parameters>
+        </callback>
+      </field>
+      <field name="halt">
+        <callback name="halt">
+          <return-value transfer-ownership="none">
+            <type name="none" c:type="void"/>
+          </return-value>
+          <parameters>
+            <parameter name="self" transfer-ownership="none">
+              <type name="Comp" c:type="DigitalComp*"/>
+            </parameter>
+          </parameters>
+        </callback>
+      </field>
+    </record>
+  </namespace>
+</repository>
